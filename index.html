@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://css.gg/options.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <title>Games Downloader</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-image"></div>
+
+
+     <header id="titlebar">
+       <div id="drag-region">
+         <div id="window-title">
+           <span>Games Downloader</span>
+         </div>
+
+         <div id="window-controls">
+           <div class="button" id="min-button">
+             <img class="icon" srcset="icons/min-w-10.png 1x, icons/min-w-12.png 1.25x, icons/min-w-15.png 1.5x, icons/min-w-15.png 1.75x, icons/min-w-20.png 2x, icons/min-w-20.png 2.25x, icons/min-w-24.png 2.5x, icons/min-w-30.png 3x, icons/min-w-30.png 3.5x" draggable="false" />
+           </div>
+           <div class="button" id="restore-button">
+             <img class="icon" srcset="icons/restore-w-10.png 1x, icons/restore-w-12.png 1.25x, icons/restore-w-15.png 1.5x, icons/restore-w-15.png 1.75x, icons/restore-w-20.png 2x, icons/restore-w-20.png 2.25x, icons/restore-w-24.png 2.5x, icons/restore-w-30.png 3x, icons/restore-w-30.png 3.5x" draggable="false" />
+           </div>
+           <div class="button" id="close-button">
+             <img class="icon" srcset="icons/close-w-10.png 1x, icons/close-w-12.png 1.25x, icons/close-w-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-w-20.png 2x, icons/close-w-20.png 2.25x, icons/close-w-24.png 2.5x, icons/close-w-30.png 3x, icons/close-w-30.png 3.5x" draggable="false" />
+           </div>
+         </div>
+       </div>
+     </header>
+
+
+
+     <div class="gradient-border" id="main">
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search games...">
+       <div id="wrapper">
+         <div class="container">
+           <div id="grid">
+
+           </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+      <div id="pannellopulsanti">
+        <button onclick="btn2()" class="btnhome"><img src="icons/home.png"> </button>
+        <button onclick="btnhome()" class="btn2"><img src="icons/wrld.png"></button>
+        <button onclick="btnopt()" class="btn3"><img src="icons/opt.png"></button>
+        <button onclick="btnlib()" class="btnlib"><img src="icons/lib.png"></button>
+      </div>
+
+      <div id="secondopul">
+        <h1>Games Update</h1>
+        
+      </div>
+
+      <div id="panelopt">
+        <h1>Options</h1>
+        <p id="testo1">Version: <span id="ver"></span></p><span id="update2"></span>
+        <p id="testo2">Where to look for games: </p><input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
+        <p id="testo3">CheckMate - All Rights Reserved</p>
+  
+        
+      </div>
+      <div id="lib">
+        <h1>Library</h1>
+        <div id="wrapper">
+          <div class="container">
+            <div id="grid2">
+ 
+            </div>
+          </div>
+        </div>
+
+        <button onclick="updatesearch()" class="btnsearch">Update Library</button>
+      </div>
+
+      <script>
+        function versioncontrol() {
+          var oldVer = "1.0.0";
+          var newVer= "1.0.0";
+          document.getElementById("ver").innerHTML = oldVer;
+          if (oldVer < newVer) {
+            document.getElementById("update2").innerHTML = "Update Available";
+          } else {
+            document.getElementById("update2").innerHTML = "Up To Date";
+          }
+        }
+        
+      </script>
+      
+
+    
+
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <script type="text/javascript">
+      function getfolder(e) {
+        var files = e.target.files;
+        var path = files[0].webkitRelativePath;
+        var Folder = path.split("/");
+      }
+    </script>
+
+    <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("grid");
+        li = ul.getElementsByClassName('cell');
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("div")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+      
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+    <script>
+      function rungame(id){
+        const path = require('path');
+        var child_process = require('child_process');
+        var dirgames =path.dirname(id)+'\\\\';
+        var dirgame = dirgames.replace("’","'");
+        var namegame =path.basename(id);
+        child_process.exec(namegame, {cwd: dirgame});
+      }
+      
+      
+      function show(clicked_id){
+        clicked_id = parseFloat(clicked_id);
+        document.getElementsByClassName('info')[clicked_id].style.visibility = 'visible';
+
+      }
+    </script>
+
+    <script>
+      function show1(clicked_idd){
+        clicked_idd = parseFloat(clicked_idd);
+        document.getElementsByClassName('info')[clicked_idd].style.visibility = 'hidden';
+
+      }
+      
+      
+      
+    </script>
+
+    <script>
+      function btnhome() {
+      document.getElementById('main').style.visibility = 'hidden';
+      document.getElementById('secondopul').style.visibility = 'visible';
+      document.getElementById('panelopt').style.visibility = 'hidden';
+      document.getElementById('lib').style.visibility = 'hidden';
+      }
+    </script>
+    <script>
+      function btn2() {
+        document.getElementById('secondopul').style.visibility = 'hidden';
+        document.getElementById('main').style.visibility = 'visible';
+        document.getElementById('panelopt').style.visibility = 'hidden';
+        document.getElementById('lib').style.visibility = 'hidden';
+
+      }
+    </script>
+    <script>
+      function btnopt() {
+        document.getElementById('secondopul').style.visibility = 'hidden';
+        document.getElementById('main').style.visibility = 'hidden';
+        document.getElementById('panelopt').style.visibility = 'visible';
+        document.getElementById('lib').style.visibility = 'hidden';
+        versioncontrol()
+        
+
+      }
+    </script>
+
+    <script>
+      function btnlib() {
+      document.getElementById('secondopul').style.visibility = 'hidden';
+      document.getElementById('main').style.visibility = 'hidden';
+      document.getElementById('panelopt').style.visibility = 'hidden';
+      document.getElementById('lib').style.visibility = 'visible';
+
+      }
+
+    </script>
+
+  </body>
+</html>

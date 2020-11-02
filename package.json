@@ -1,0 +1,21 @@
+{
+  "name": "GamesDownloader",
+  "version": "1.0.0",
+  "description": "Games Downloader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/ch-ckmate/GamesDownloader",
+  "author": "Alessandro Pigato",
+  "license": "GNU GPL V3.0",
+  "devDependencies": {
+    "electron": "^8.2.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "csv-parser": "^2.3.3",
+    "csvtojson": "^2.0.10",
+    "got": "^10.4.0"
+  }
+}
