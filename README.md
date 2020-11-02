@@ -1,7 +1,9 @@
 # Games Downloader
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/oooo-kill-em.svg)](https://forthebadge.com)
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![Electron CD](https://github.com/gorilla-devs/GDLauncher/workflows/Electron%20CD/badge.svg?branch=next)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/ch-ckmate) [![Generic badge](https://img.shields.io/badge/cp-Electron-green.svg)](https://shields.io/)
+
+
 
 <p align="center">
     <img width="800" height="auto" src="home.png" alt="GamesDownloader" />
