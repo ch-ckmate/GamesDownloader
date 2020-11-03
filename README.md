@@ -19,6 +19,7 @@ Each game has a respective panel wich display the size, info on installations an
   
 <br/>
 <br/>  
+
 ## This project is for demonstration purposes only.
    Developers have no responsibility for any use of this software.
 
