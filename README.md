@@ -3,7 +3,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/ch-ckmate) [![Generic badge](https://img.shields.io/badge/cp-Electron-green.svg)](https://shields.io/)
 
-
+<br/>
 
 <p align="center">
     <img width="800" height="auto" src="home.png" alt="GamesDownloader" />
@@ -12,7 +12,7 @@
 <p align="center">
     <img width="800" height="auto" src="library.png" alt="GamesDownloader" />
 </p>
-
+<br/>
 This app aims to download the game of your choice, and see installed games in the library panel.
 The games list is not public, as for the script that makes it; if you want it, contact me.
 Each game has a respective panel wich display the size, info on installations and a download button; the download button download the torrent file of the game.
@@ -34,7 +34,7 @@ What is missing?
 <br/>  
 <br/>  
 <br/>  
-<br/>  
+
   
 ## This project is licensed under the GNU GPL V3.0
 
