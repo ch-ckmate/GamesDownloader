@@ -17,8 +17,8 @@ This app aims to download the game of your choice, and see installed games in th
 The games list is not public, as for the script that makes it; if you want it, contact me.
 Each game has a respective panel wich display the size, info on installations and a download button; the download button download the torrent file of the game.
   
-  
-  
+<br/>
+<br/>  
 ## This project is for demonstration purposes only.
    Developers have no responsibility for any use of this software.
 
@@ -30,10 +30,10 @@ What is missing?
    - Make the update library button work.
    - Implement scraping of CrackWatch website to see the latest cracked games.
    
-  
-  
-  
-  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
   
 ## This project is licensed under the GNU GPL V3.0
 
